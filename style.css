@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #221a25 16.62%, #8357ad 85.61%);
+    min-height: 100vh;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+
+#nav {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+    font-family: 'Sarala', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cabecalho-menu-item:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    display: flex;
+    list-style: none;
+    gap: 5.9rem;
+}
+
+.conteudo {
+    border-top: 0.4px solid #FFFFFF;;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-family: 'Righteous', cursive ;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFFFFF;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #decdfa;
+}
+
+.conteudo-principal-escrito-botao {
+    background-color: #bca7e0;
+    width: 180px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.445);
+    border-radius: 21px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #18101b;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+.conteudo-principal-escrito-botao:hover {
+    background-color: #3e2547;
+    color: #decdfa;
+}
+
+.conteudo-principal-imagem {
+    height: 430px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.conteudo-secundario-titulo {
+    border-top: 0.4px solid #ffffff;
+    padding-top: 25px;
+    font-family: 'Righteous', cursive ;
+    font-weight: 400;
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.conteudo-paragrafo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #decdfa;
+}
+
+.rodape {
+    margin-top: 48px;
+    padding: 40px;
+    border-top: 0.4px solid #FFFFFF;
+}
+
+.rodape-imagem {
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 758px) {
+   
+    .cabecalho-menu-item {
+        font-family: 'Sarala', sans-serif;
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 17px;
+        
+    }
+
+    
+
+    #menu a {
+        display: block;
+        padding: .5rem;
+    }
+
+    #btn-mobile {
+        display: block;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #c7c7c7;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(200vh - 70px);
+        visibility: visible;
+    }
+
+    #menu a  {
+        padding: 1rem 0;    
+        margin: 0 1rem;
+        border-bottom: 2px solid #8357ad;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #spa {
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+        color: #3e2547;
+    }
+
+    #spa::after, #spa::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #spa {
+        border-top-color: transparent;
+    }
+
+    #nav.active #spa::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #spa::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .cabecalho {
+        width: auto;
+    }
+
+    .conteudo-principal {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .conteudo-secundario-titulo {
+        font-size: 5vh;
+    }
+    
+    .conteudo-paragrafo {
+        font-size: 2vh;
+    }
+
+}
