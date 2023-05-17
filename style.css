@@ -188,12 +188,13 @@ body {
         width: 100%;
         top: 70px;
         right: 0px;
-        background: linear-gradient(68.15deg, #221a25 16.62%, #8357ad 85.61%);
+        background: #221a25;
         transition: .6s;
         z-index: 1000;
         height: 0px;
         visibility: hidden;
         overflow: hidden;
+
     }
 
     #nav.active #menu {
@@ -265,17 +266,20 @@ body {
         display: flex;
         align-items: center;
         margin: auto;
+        padding: 20px;
     }
 
     .botao {
         display: flex;
         align-items: center;
         margin: auto;
+        padding: 20px;
     }
 
     .conteudo-principal-imagem {
         align-items: center;
         margin: auto;
+        margin-top: -130px;
     }
 
     .conteudo-principal-escrito-subtitulo {
